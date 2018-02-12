@@ -27,4 +27,5 @@ If your festival/speechtools headers and libs aren't in the standard place, you 
 
 * `FESTIVAL_INCLUDE` - festival header directory. Default is `/usr/include/festival`
 * `SPEECH_INCLUDE` - speech tools header directory. Default is `/usr/include/speech_tools`
-* `FESTIVAL_LIB` - lib directory for festival/speech tools `/usr/lib`
+* `FESTIVAL_LIB` - lib directory for festival `/usr/lib`
+* `SPEECH_LIB` - lib directory for speech tools `/usr/lib`

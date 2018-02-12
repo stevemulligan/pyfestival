@@ -3,8 +3,9 @@ from distutils.core import setup, Extension
 import os
 
 festival_include = os.environ.get("FESTIVAL_INCLUDE", '/usr/include/festival')
-speech_tools_include = os.environ.get("SPECCH_INCLUDE", '/usr/include/speech_tools')
+speech_tools_include = os.environ.get("SPEECH_INCLUDE", '/usr/include/speech_tools')
 festival_lib = os.environ.get("FESTIVAL_LIB", '/usr/lib')
+speech_lib = os.environ.get("SPEECH_LIB", '/usr/lib')
 
 festival_classifiers = [
 "Programming Language :: Python :: 2",
@@ -40,7 +41,7 @@ setup(
             '_festival',
             ['_festival.cpp'],
             include_dirs=[festival_include, speech_tools_include],
-            library_dirs=[festival_lib],
+            library_dirs=[festival_lib, speech_lib],
             libraries=['Festival', 'estools', 'estbase', 'eststring'],
         ),
     ],
